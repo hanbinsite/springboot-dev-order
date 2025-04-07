@@ -1,10 +1,10 @@
-package site.hb.ai;
+package site.hb.order;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AiApplicationTests {
+class OrderApplicationTests {
 
 	@Test
 	void contextLoads() {

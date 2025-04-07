@@ -16,7 +16,7 @@ public class GlobalExceptionHandler {
 
     // 新增：处理校验异常
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public Result<?> handleValidationExceptions(MethodArgumentNotValidException ex) {
+    public Result<Object> handleValidationExceptions(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
         ex.getBindingResult().getAllErrors().forEach(error -> {
             String fieldName = ((FieldError) error).getField();
@@ -32,9 +32,9 @@ public class GlobalExceptionHandler {
         return ResultUtil.error(e.getMessage());
     }
 
-        // 处理其他特定异常示例（如权限异常）
+    // 处理其他特定异常示例（如权限异常）
     @ExceptionHandler(AccessDeniedException.class)
-    public Result<?> handleAccessDenied(AccessDeniedException e) {
+    public Result<String> handleAccessDenied(AccessDeniedException e) {
         return ResultUtil.fail(403, "权限不足: " + e.getMessage());
     }
     
