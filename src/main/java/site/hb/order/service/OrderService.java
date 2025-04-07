@@ -5,6 +5,12 @@ package site.hb.order.service;
  */
 public interface OrderService {
 
+    /**
+     * 创建订单
+     * @return String
+     */
+    String createOrder();
+
 
     /**
      * 取消订单

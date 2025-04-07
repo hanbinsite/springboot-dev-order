@@ -82,12 +82,4 @@ public class OrderIdGeneratorUtils {
         
         return new String(buffer);
     }
- 
-    public static void main(String[] args) {
-        OrderIdGeneratorUtils generator = new OrderIdGeneratorUtils(1);
-        for (int i = 0; i < 5; i++) {
-            log.info(generator.generateOrderId());
-        }
-    }
-
 }
