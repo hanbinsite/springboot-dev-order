@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import site.hb.order.common.exception.base.CustomException;
 import site.hb.order.service.OrderService;
 import site.hb.order.utils.SnowflakeIdGenerator;
 
@@ -27,7 +26,7 @@ public class OrderServiceImpl implements OrderService {
      */
     @Override
     public String createOrder() {
-        return snowflakeIdGenerator.nextCompositeId();
+        return String.valueOf(snowflakeIdGenerator.nextId());
     }
 
 }

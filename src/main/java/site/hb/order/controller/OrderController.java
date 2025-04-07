@@ -7,6 +7,9 @@ import jakarta.annotation.Resource;
 import site.hb.order.common.result.Result;
 import site.hb.order.common.result.ResultUtil;
 import site.hb.order.service.OrderService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/order")
@@ -16,6 +19,7 @@ public class OrderController {
     private OrderService orderService;
 
 
+    @GetMapping("create")
     public Result<Object> createOrder() {
         return ResultUtil.success(orderService.createOrder());
     }
