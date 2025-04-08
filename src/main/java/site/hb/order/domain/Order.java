@@ -83,5 +83,15 @@ public class Order {
      */
     private Date completionTime;
 
+    /**
+     * 是否删除:0=未删除,1=已删除
+     */
+    private int isDel;
+
+    /**
+     * 删除时间
+     */
+    private Date delTime;
+
 
 }

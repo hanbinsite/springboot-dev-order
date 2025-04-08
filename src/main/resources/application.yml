@@ -1,7 +1,9 @@
 
 spring:
+  profiles:
+    active: dev
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/dev-self?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/dev?useSSL=false&serverTimezone=UTC
     username: root
     password: xxxxxx
     driver-class-name: com.mysql.cj.jdbc.Driver
